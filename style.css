@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+
+*{
+    font-family: "Freeman", sans-serif;
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:linear-gradient(#111,#2b2525) ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: "";
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+}
+.container{
+background: rgba(250, 250, 250, 0.1);
+width: 80%;
+height: 80%;
+border-radius: 4px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+nav .logo{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+nav ul li a:hover{
+    color: #f54c4c;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.text{
+width: 40%;
+color: #fff;
+}
+.text h2{
+    text-transform: uppercase;
+letter-spacing: 2px;
+} 
+.text p{
+    line-height: 20px;
+}
+
+.imge{
+    width: 50%;
+}
+img{
+   
+    width: 100%;
+}
+
+@media(max-width:600px){
+    .content,nav{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .text p{
+        line-height: 15px;
+    }
+    body::after{
+        content: "";
+        background-color: red;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        clip-path: circle(40% at bottom);
+        z-index: -1;
+    }
+}
